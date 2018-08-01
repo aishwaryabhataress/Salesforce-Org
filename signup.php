@@ -61,16 +61,16 @@
 			<input type="text" name="country" placeholder="Country" class="credentials" style="margin-top:5%;" value="<?php echo $country;?>">
 			<input type="text" name="verificationcode" placeholder="Verification Code" class="credentials" style="margin-top:5%;" value="<?php echo $verificationcode;?>">
 			<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;" value="<?php echo $emailid;?>">
-			<select class="credentials" name="timezone" style="margin-top:5%;" value="timezone">
+			<select class="credentials" name="timezone" style="margin-top:5%;">
 				<option value="GMT">(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)</option>
 			</select>
-			<select class="credentials" name="locale" style="margin-top:5%;" value="locale">
+			<select class="credentials" name="locale" style="margin-top:5%;">
 				<option value="en_US">English(United States)</option>
 			</select>
-			<select class="credentials" name="language" style="margin-top:5%;" value="language">
+			<select class="credentials" name="language" style="margin-top:5%;" >
 				<option value="en_US">English</option>
 			</select>
-			<select class="credentials" name="emailEncoding" style="margin-top:5%;" value="emailEncoding">
+			<select class="credentials" name="emailEncoding" style="margin-top:5%;" >
 				<option value="UTF-8">General US & Western Europe (ISO-8859-1, ISO-LATIN-1)</option>
 			</select>
 			<input type="hidden" name="profileId" value="00e1J0000017aBdQAI">
