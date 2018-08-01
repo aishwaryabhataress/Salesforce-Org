@@ -61,17 +61,17 @@
 			<input type="text" name="country" placeholder="Country" class="credentials" style="margin-top:5%;" value="<?php echo $country;?>">
 			<input type="text" name="verificationcode" placeholder="Verification Code" class="credentials" style="margin-top:5%;" value="<?php echo $verificationcode;?>">
 			<input type="text" name="emailid" placeholder="Email Id" class="credentials" style="margin-top:5%;" value="<?php echo $emailid;?>">
-			<select class="credentials" name="timezone" style="margin-top:5%;">
-				<option name="timezone" value="GMT">(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)</option>
+			<select name="timezone" value="timezone" class="credentials" style="margin-top:5%;">
+				<option value="GMT">(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)</option>
 			</select>
-			<select class="credentials" name="locale" style="margin-top:5%;">
-				<option name="locale" value="en_US">English(United States)</option>
+			<select name="locale" value="locale" class="credentials" style="margin-top:5%;">
+				<option value="en_US">English(United States)</option>
 			</select>
-			<select class="credentials" name="language" style="margin-top:5%;" >
-				<option name="language" value="en_US">English</option>
+			<select name="language" value="language" class="credentials" style="margin-top:5%;" >
+				<option value="en_US">English</option>
 			</select>
-			<select class="credentials" name="emailEncoding" style="margin-top:5%;" >
-				<option name="emailEncoding" value="UTF-8">General US & Western Europe (ISO-8859-1, ISO-LATIN-1)</option>
+			<select name="emailEncoding" value="emailEncoding" class="credentials" style="margin-top:5%;" >
+				<option value="UTF-8">General US & Western Europe (ISO-8859-1, ISO-LATIN-1)</option>
 			</select>
 			<input type="hidden" name="profileId" value="00e1J0000017aBdQAI">
 			<input type="text" name="username" placeholder="Username" class="credentials" style="margin-top:5%;" value="<?php echo $username;?>">
@@ -90,7 +90,7 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]', '$_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[timezone]', '$_POST[locale]', '$_POST[emailencoding]' , '$_POST[profileId]', '$_POST[language]', '$_POST[username]', '$_POST[password]');";
+	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST['firstname']','$_POST['lastname']','$_POST['alias']','$_POST['nickname']','$_POST['phonenumber']', '$_POST['mobilenumber']', '$_POST['street']', '$_POST['city']', '$_POST['zipcode']', '$_POST['state']', '$_POST['country']', '$_POST['emailid']', '$_POST['timezone']', '$_POST['locale']', '$_POST['emailencoding']' , '$_POST['profileId']', '$_POST['language']', '$_POST['username']', '$_POST['password']');";
 	//$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('aishwarya','bhat','ab','ab','9011523102', '9011523102', 'kothrud', 'Pune', '411038', 'Maharashtra', 'India', 'aishwarya.bhat@aress.com', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', 'aishwarya.bhat@ab.com', '1234567890');";
 	$result= pg_query($query);
 ?>                                                        
