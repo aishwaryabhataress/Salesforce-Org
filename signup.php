@@ -1,5 +1,10 @@
 <html>
 <head>
+	<script>
+		function gotojs(wetru){
+			alert(wetru);
+		}
+	</script>	
 </head>
 <style>
 	.container{
@@ -49,7 +54,7 @@
 		<div class="inner-container">
 		<form action="signup.php" method="post">
 			<input type="text" name="firstname" placeholder="First Name" class="credentials" value="<?php echo $firstname;?>">
-			<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" value="wrett">
+			<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" value="<?php echo $lastname;?>">
 			<input type="text" name="alias" placeholder="Alias" class="credentials" style="margin-top:5%;" value="<?php echo $alias;?>">
 			<input type="text" name="nickname" placeholder="Nickname" class="credentials" style="margin-top:5%;" value="<?php echo $nickname;?>">
 			<input type="number" name="phonenumber" placeholder="Phone Number" class="credentials" style="margin-top:5%;" value="<?php echo $phonenumber;?>">
@@ -78,7 +83,7 @@
 			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" value="<?php echo $password;?>">
 			<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" value="<?php echo $repassword;?>">
 			
-			<button type="submit" name="submit" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
+			<button type="submit" name="submit" onclick="gotojs($lastname)"class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 		</form>
 		</div>
 	</div>
