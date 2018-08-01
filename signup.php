@@ -97,7 +97,7 @@
 	}
 	echo "". $lastname;
 	//$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]',' $_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', '$_POST[username]', '$_POST[password]');";
-	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('aishwarya','$_POST[lastname]','ab','ab','9011523102', '9011523102', 'kothrud', 'Pune', '411038', 'Maharashtra', 'India', 'aishwarya.bhat@aress.com', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', 'aishwarya@ab.com', '1234567890');";
+	$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('aishwarya','lastname','ab','ab','9011523102', '9011523102', 'kothrud', 'Pune', '411038', 'Maharashtra', 'India', 'aishwarya.bhat@aress.com', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', 'aishwarya@ab.com', '1234567890');";
 	$result= pg_query($query);
 	if ( filter_has_var( INPUT_GET, 'submit' ) ) {
 		$s1 = $_GET['lastname'];
