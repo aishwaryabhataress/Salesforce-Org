@@ -1,8 +1,8 @@
 <html>
 <head>
 	<script>
-		function gotojs(wetru){
-			alert(wetru);
+		function gotojs(){
+			alert('gfdg');
 		}
 	</script>	
 </head>
@@ -83,7 +83,7 @@
 			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" value="<?php echo $password;?>">
 			<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" value="<?php echo $repassword;?>">
 			
-			<button type="submit" name="submit" onclick="gotojs($lastname)"class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
+			<button type="submit" name="submit" onClick="gotojs();" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 		</form>
 		</div>
 	</div>
