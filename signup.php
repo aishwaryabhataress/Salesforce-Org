@@ -43,10 +43,11 @@
 		text-align:center;
 	}
 </style>
-<body style="background-color:#04C5F9">
-	<?php
+		<?php
 	$firstname = $lastname = $alias = $nickname = $phonenumber = $mobilenumber = $street = $city = $zipcode = $state = $country = $verification = $emailid = $timezone = $password = $repassword = "";
 	?>
+<body style="background-color:#04C5F9">
+
 		<div class="container">
 		<div class="signin">
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;">
