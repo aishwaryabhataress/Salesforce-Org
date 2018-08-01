@@ -91,16 +91,16 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	$compareqry="SELECT id FROM salesforce.createuser__c WHERE Email__c=$_POST[email] AND Verification_Code__c=$_POST[verificationcode];";
+	$compareqry="SELECT id FROM salesforce.createuser__c WHERE Email__c=$email AND Verification_Code__c=$verificationcode;";
 	$result1= pg_query($compareqry);
-	if($result1 !=NULL)
+	if($result1 ==NULL)
+	{
+		echo "The verification code or email id is wrong";
+	}
+	else
 	{
 		$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]',' $_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[timezone]', '$_POST[locale]', '$_POST[emailencoding]' , '00e1J0000017aBdQAI', '$_POST[language]', '$_POST[username]', '$_POST[password]');";
 		//$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('aishwarya','lastname','abs','abs','9011523102', '9011523102', 'kothrud', 'Pune', '411038', 'Maharashtra', 'India', 'aishwarya.bhat@aress.com', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', 'aishwarya@ab.com', '1234567890');";
 		$result= pg_query($query);
-	}
-	else
-	{
-		echo "The verification code or email id is wrong";
 	}	
 ?>                                                        
