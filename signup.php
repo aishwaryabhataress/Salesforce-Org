@@ -48,7 +48,7 @@
 			<img src="https://image3.mouthshut.com/images/imagesp/925609709s.jpg" alt="Aress Picture" style="height:90px;width:200px;">
 		</div>
 		<div class="inner-container">
-		<form action="index.php" method="post">
+		<form action="signup.php" method="post">
 			<input type="text" name="firstname" placeholder="First Name" class="credentials" value="<?php echo $firstname;?>">
 			<input type="text" name="lastname" placeholder="Last Name" class="credentials" style="margin-top:5%;" value="<?php echo $lastname;?>">
 			<input type="text" name="alias" placeholder="Alias" class="credentials" style="margin-top:5%;" value="<?php echo $alias;?>">
@@ -79,7 +79,7 @@
 			<input type="password" name="password" placeholder="Password" class="credentials" style=" margin-top:5%;" value="<?php echo $password;?>">
 			<input type="password" name="repassword" placeholder="Re-enter Password" class="credentials" style=" margin-top:5%;" value="<?php echo $repassword;?>">
 			
-			<button type="submit" name="submit" onClick="gotojs('niraj'+$_POST[lastname]+'End');" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
+			<button type="submit" name="submit" class="credentials" style="margin-top:5%; text-align:center; background-color:#04C5F9; color:white;"> Sign Up </button>				
 		</form>
 		</div>
 	</div>
@@ -99,6 +99,7 @@
 	}
 	else
 	{
+		echo "The verification code works well";
 		$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[alias]','$_POST[nickname]','$_POST[phonenumber]', '$_POST[mobilenumber]',' $_POST[street]', '$_POST[city]', '$_POST[zipcode]', '$_POST[state]', '$_POST[country]', '$_POST[emailid]', '$_POST[timezone]', '$_POST[locale]', '$_POST[emailencoding]' , '00e1J0000017aBdQAI', '$_POST[language]', '$_POST[username]', '$_POST[password]');";
 		//$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('aishwarya','lastname','abs','abs','9011523102', '9011523102', 'kothrud', 'Pune', '411038', 'Maharashtra', 'India', 'aishwarya.bhat@aress.com', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', 'aishwarya@ab.com', '1234567890');";
 		$result= pg_query($query);
