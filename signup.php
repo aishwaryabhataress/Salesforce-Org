@@ -93,7 +93,7 @@
 	}
 	$compareqry="SELECT id FROM salesforce.createuser__c WHERE Email__c=$email AND Verification_Code__c=$verificationcode;";
 	$result1= pg_query($compareqry);
-	if($result1 ==NULL)
+	if($result1 = NULL)
 	{
 		echo "The verification code or email id is wrong";
 	}
